@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://VisualScripts/basicmove2d.vs" type="Script" id=2]
+
+[node name="base" type="Node2D" index="0"]
+
+[node name="icon" type="Sprite" parent="." index="0"]
+
+position = Vector2( 496.992, 238.018 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+speed = 47.05
+
+
