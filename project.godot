@@ -16,7 +16,3 @@ config/icon="res://icon.png"
 [editor_plugins]
 
 enabled=PoolStringArray( "vs_custom_nodes" )
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
