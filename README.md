@@ -4,6 +4,8 @@ This library is a collection of visual script custom nodes that anyone can use i
 
 So as to make the **Visual Scripting WorkFlow** in Godot easier to use.
 
+![EXAMPLE](https://i.imgur.com/rws1bBY.png)
+                      HERE are some basic nodes from the library.
 
 
 ## Steps for using the Library
