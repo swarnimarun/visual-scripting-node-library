@@ -11,3 +11,5 @@ So as to make the **Visual Scripting WorkFlow** in Godot easier to use.
 To use the custom nodes in this library all you have to do is copy the `addons` folder from this repo to your project and `paste it there`.
 
 Then just goto the `Project Setting` and then in `Plugins tab` and set the `Plugin("VisualScript Library") to Active`.
+
+![Project Settings Window](https://i.imgur.com/V6Mh7hA.png)
