@@ -17,7 +17,7 @@ export(MATH) var math = MATH.MULTIPLY
 export(TYPES) var vec = TYPES.VECTOR2
 
 func _get_caption():
-	return "FloatVectorMath"
+	return "Float Vector Math"
 
 func _get_text():
 	return ""

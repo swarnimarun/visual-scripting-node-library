@@ -13,6 +13,10 @@ config_version=3
 config/name="Visual Scripting Custom Nodes"
 config/icon="res://vs_icon.png"
 
+[autoload]
+
+GlobalScript="*res://GDScripts/GlobalScript.gd"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "vs_custom_nodes" )
