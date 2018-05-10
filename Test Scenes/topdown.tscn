@@ -17,11 +17,13 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 speed = 10.0
 
 [node name="sprite" type="Sprite" parent="player" index="0"]
 
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="shape" type="CollisionShape2D" parent="player" index="1"]
 

@@ -5,17 +5,17 @@ enum MoveDirs {
 	FOUR,
 	EIGHT
 }
-export var movementDirections = MoveDirs.FOUR
+export(MoveDirs) var movementDirections = MoveDirs.FOUR
 
 export var toRotate = false
 
 enum Directions{
 	Up, # 0
-	Down, # 1
-	Left, # 2
-	Right # 3
+	Right, # 1
+	Down, # 2
+	Left # 3
 }
-export var initialDir = Directions.Down
+export(Directions) var initialDir = Directions.Down
 
 
 var input = Vector2()
@@ -69,16 +69,24 @@ func _step(inputs, outputs, start_mode, working_mem):
 	var inp = inputs[2]
 	
 	if movementDirections == MoveDirs.FOUR:
-		if input.x != 0: # this will be modified once strength keys start working with keyboard
+		if input.x != 0:
 			inp.y = 0
 		if input.y != 0:
 			inp.x = 0
 		input = inp
-	
-	#change rotation
-	if toRotate:
 		
-		pass # to complete
+		if inp.x > 0:
+			facing = Directions.Right
+		elif inp.x < 0:
+			facing = Directions.Left
+		elif inp.y > 0:
+			facing = Directions.Down
+		elif inp.y < 0:
+			facing = Directions.Up
+	
+		#change rotation
+		if toRotate:
+			body.rotation_degrees = (facing - initialDir) * 90
 	
 	body.move_and_slide(inp * inputs[1] * 200 * inputs[3])
 	return 0
