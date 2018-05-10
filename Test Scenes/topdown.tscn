@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://VisualScripts/player.vs" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32.0553, 32.0633 )
+
+[node name="TopDown" type="Node2D" index="0"]
+
+[node name="player" type="KinematicBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+speed = 10.0
+
+[node name="sprite" type="Sprite" parent="player" index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="shape" type="CollisionShape2D" parent="player" index="1"]
+
+shape = SubResource( 1 )
+
+
