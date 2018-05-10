@@ -13,7 +13,7 @@ So as to make the **Visual Scripting WorkFlow** in Godot easier to use.
 -------
 
 
-### Follow me at: [Twitter: @steincodes](www.twitter.com/Steincodes) and Find Tutorials about this at [Youtube:Steincodes](www.youtube.com/c/steincodes)
+### Follow me at: [Twitter: @steincodes](https://www.twitter.com/Steincodes) and Find Tutorials about this at [Youtube:Steincodes](https://www.youtube.com/c/steincodes)
 
 
 ------
