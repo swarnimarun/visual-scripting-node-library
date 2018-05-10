@@ -8,6 +8,18 @@ So as to make the **Visual Scripting WorkFlow** in Godot easier to use.
                       HERE are some basic nodes from the library.
 
 
+
+
+-------
+
+
+### Follow me at: [Twitter: @steincodes](www.twitter.com/Steincodes) and Find Tutorials about this at [Youtube:Steincodes](www.youtube.com/c/steincodes)
+
+
+------
+
+
+
 ## Steps for using the Library
 
 To use the custom nodes in this library all you have to do is copy the `addons` folder from this repo to your project and `paste it there`.
