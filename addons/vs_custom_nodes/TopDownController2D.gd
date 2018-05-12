@@ -1,3 +1,6 @@
+
+# This is v1.0 of the TopDownController2D
+
 tool
 extends VisualScriptCustomNode
 
@@ -10,10 +13,14 @@ export(MoveDirs) var movementDirections = MoveDirs.FOUR
 export var toRotate = false
 
 enum Directions{
-	Up, # 0
-	Right, # 1
-	Down, # 2
-	Left # 3
+	Up, 
+	TopRight,
+	Right, 
+	BottomRight, 
+	Down, 
+	BottomLeft,
+	Left,
+	TopLeft
 }
 export(Directions) var initialDir = Directions.Down
 
@@ -83,12 +90,31 @@ func _step(inputs, outputs, start_mode, working_mem):
 			facing = Directions.Down
 		elif inp.y < 0:
 			facing = Directions.Up
+		
+	else:
+		if inp.x > 0 and inp.y == 0:
+			facing = Directions.Right
+		elif inp.x > 0 and inp.y < 0:
+			facing = Directions.TopRight
+		elif inp.x > 0 and inp.y > 0:
+			facing = Directions.BottomRight
+		elif inp.x < 0 and inp.y == 0:
+			facing = Directions.Left
+		elif inp.x < 0 and inp.y < 0:
+			facing = Directions.TopLeft
+		elif inp.x < 0 and inp.y > 0:
+			facing = Directions.BottomLeft
+		elif inp.y > 0 and inp.x == 0:
+			facing = Directions.Down
+		elif inp.y < 0 and inp.x == 0:
+			facing = Directions.Up
 	
-		#change rotation
-		if toRotate:
-			body.rotation_degrees = (facing - initialDir) * 90
+	#change rotation
+	if toRotate:
+		body.rotation_degrees = (facing - initialDir) * 45
 	
-	body.move_and_slide(inp * inputs[1] * 200 * inputs[3])
+	
+	body.move_and_slide(inp.normalized() * inputs[1] * 200 * inputs[3])
 	return 0
 
 
