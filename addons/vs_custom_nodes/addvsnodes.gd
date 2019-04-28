@@ -9,6 +9,7 @@ const topdown2d = preload("res://addons/vs_custom_nodes/TopDownController2D.gd")
 const loaddir = preload("res://addons/vs_custom_nodes/LoadDirectory.gd")
 const twodimiterator = preload("res://addons/vs_custom_nodes/2DIterator.gd")
 const getmousepos = preload("res://addons/vs_custom_nodes/GetMousePosition.gd")
+const reroute = preload("res://addons/vs_custom_nodes/Reroute.gd")
 
 func _enter_tree():
 	# add the custom node to the Visual Script Editor on start-up
@@ -19,6 +20,7 @@ func _enter_tree():
 	VisualScriptEditor.add_custom_node("LoadDirectory", "Input", loaddir)
 	VisualScriptEditor.add_custom_node("2DIterator", "Math", twodimiterator)
 	VisualScriptEditor.add_custom_node("GetMousePosition", "Input", getmousepos)
+	VisualScriptEditor.add_custom_node("Reroute", "Input", reroute)
 	# the add_custom_node() takes the "name" and "category" as index that will be used to later remove the node
 
 func _exit_tree():
@@ -30,3 +32,4 @@ func _exit_tree():
 	VisualScriptEditor.remove_custom_node("LoadDirectory", "Input")
 	VisualScriptEditor.remove_custom_node("2DIterator", "Math")
 	VisualScriptEditor.remove_custom_node("GetMousePosition", "Input")
+	VisualScriptEditor.remove_custom_node("Reroute", "Input")
